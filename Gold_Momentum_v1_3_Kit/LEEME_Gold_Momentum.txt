@@ -1,0 +1,38 @@
+GOLD MOMENTUM v1.3 — GUÍA RÁPIDA (Windows)
+
+1) Instala Python 3.11 o 3.12 desde python.org y marca “Add Python to PATH”.
+2) Crea una carpeta, por ejemplo C:\Users\TU_USUARIO\gold_momentum, y guarda ahí gold_momentum_v13.py.
+3) Abre CMD dentro de esa carpeta y ejecuta:
+
+   python -m venv .venv
+   .venv\Scripts\activate
+   python -m pip install --upgrade pip
+   python -m pip install yfinance pandas numpy
+   python gold_momentum_v13.py
+
+4) El programa descarga GLD diario de Yahoo Finance y guarda un caché local para no descargar todo en cada ejecución.
+5) Los archivos de resultados quedan en gold_reports\:
+   - summary_metrics.csv: métricas principales
+   - closed_trades.csv: operaciones cerradas
+   - equity_curve.csv: curva de capital
+   - gld_indicators.csv: precios e indicadores
+   - walk_forward_yearly_oos.csv: revisión anual fuera de muestra con parámetros fijos
+   - crisis_windows.csv: ventanas históricas de estrés
+   - monte_carlo.csv: bootstrap de retornos por operación sobre el capital
+   - cost_sensitivity.csv: deslizamiento base frente al extremo conservador
+   - daily_paper_signals.csv: señales teóricas históricas; no coloca órdenes
+   - paper_trading_log.csv: bitácora acumulada de señales diarias para seguimiento manual
+
+Opciones útiles:
+   python gold_momentum_v13.py --refresh   (descarga datos nuevos; recomendado para paper trading)
+   python gold_momentum_v13.py --commission 0.001
+   python gold_momentum_v13.py --capital 10000 --risk 0.005
+   python gold_momentum_v13.py --no-walk-forward --no-crisis --no-monte-carlo
+
+IMPORTANTE SOBRE LA ESPECIFICACIÓN:
+- Las reglas de entrada/salida se mantienen: Close > SMA100 y Momentum60 > 0 para entrar; Close < SMA100 o Momentum60 <= 0 para salir.
+- La señal se calcula al cierre y se simula la ejecución a la apertura de la siguiente sesión para evitar look-ahead.
+- La especificación no fija comisión de bróker ni el múltiplo exacto de volatilidad para tamaño. El script deja comisión en 0 por defecto (configurable) e implementa provisionalmente una distancia de riesgo de 2 x volatilidad diaria, con límite por efectivo. Debemos confirmar esos supuestos antes de considerar definitivas las métricas.
+- El riesgo presupuestado no es una pérdida máxima garantizada: no hay stop-loss duro en las reglas v1.3 y un gap puede generar pérdidas mayores.
+- GLD es un ETF de oro, no oro spot (XAU/USD) ni futuros GC.
+- Solo simulación e investigación. No conecta a un bróker ni manda órdenes.

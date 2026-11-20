@@ -1,0 +1,25 @@
+ANALIZADOR MAESTRO — GOLD MOMENTUM
+
+PARA QUÉ SIRVE
+Reúne los CSV de varias variantes/estrategias en un informe maestro y crea tablas consolidadas para métricas, operaciones, walk-forward, crisis, Monte Carlo, sensibilidad de costes, señales y comparación contra GLD buy-and-hold si esos archivos existen.
+
+INSTALACIÓN / USO EN WINDOWS
+1. Descomprime este paquete.
+2. Copia las carpetas de resultados de las cuatro variantes dentro de esta carpeta (o subcarpetas). Conserva los CSV originales dentro de cada carpeta gold_reports... .
+3. También puedes poner aquí ZIPs que contengan carpetas de resultados; el analizador los extraerá a _extraido_para_analisis.
+4. Haz doble clic en ANALIZAR_TODO.bat.
+5. Abre resultado_maestro\INFORME_MAESTRO.html. Los CSV consolidados quedan en resultado_maestro.
+
+REQUISITOS
+Python instalado y disponible como comando `python`. El .bat instala pandas. Si prefieres manual:
+  python -m pip install pandas
+  python analizador_maestro.py .
+
+IMPORTANTE SOBRE LOS ARCHIVOS QUE SE ENTREGARON
+El ZIP Gold_Momentum_v1_3_Kit original contiene el código de la estrategia, el lanzador y la guía, pero no contiene los resultados históricos generados (no trae gold_reports con summary_metrics.csv/equity_curve.csv). Por tanto, este analizador no puede calcular resultados reales hasta que se ejecuten los backtests y se copien las carpetas resultantes. Tampoco puede comparar cuatro variantes si solo se proporciona una carpeta de resultados.
+
+PARA CADA VARIANTE
+Se espera, idealmente, gold_reports.../summary_metrics.csv, equity_curve.csv, closed_trades.csv, walk_forward_yearly_oos.csv, crisis_windows.csv, monte_carlo.csv y cost_sensitivity.csv. Los archivos ausentes se omiten; no se inventan valores.
+
+SEGURIDAD
+Solo lee CSV y extrae ZIPs a una carpeta dedicada. No conecta a brokers, no manda órdenes y no modifica los resultados originales. El ranking es descriptivo, no una recomendación de inversión.

@@ -1,0 +1,113 @@
+INFORME MAESTRO — GOLD MOMENTUM
+========================================================================
+Generado: 2026-10-27 18:54:09
+Carpeta analizada: C:\Users\HP\Downloads\Gold_Momentum_v1_3_Kit
+Variantes/carpetas de resultados encontradas: 3
+
+IMPORTANTE: este informe resume los CSV existentes. No vuelve a ejecutar ni altera backtests.
+No es una garantía de resultados futuros ni una orden de compra/venta.
+
+1. gold_reports_comm_000
+------------------------------------------------------------------------
+Ruta: gold_reports_comm_000
+  Inicio: 2004-11-18
+  Fin: 2026-10-26
+  Velas: 5,518
+  Capital inicial: $10,000.00
+  Capital final: $15,414.60
+  Rentabilidad neta: 54.15%
+  Rentabilidad anualizada CAGR: 1.99%
+  Sharpe: 0.455
+  Drawdown máximo: -15.44%
+  Operaciones cerradas: 131
+  Tasa de acierto: 33.59%
+  Profit factor: 2.251
+  Racha máxima de pérdidas: 10
+  Máximo tiempo bajo máximo (sesiones): 2,006
+  Tiempo en mercado: 55.65%
+  Comisión por lado: 0.00%
+  Slippage normal por lado: 0.06%
+  Slippage alta volatilidad por lado: 0.15%
+  Posición abierta al final: 0.000
+  Operaciones con PnL legible: 131
+  PnL neto acumulado de operaciones cerradas: $5,414.60
+  Ganadoras / perdedoras: 44 / 87
+  Walk-forward OOS: 18 años; años positivos 10/18; retorno anual mediano 1.09%
+  Ventanas de crisis legibles: 5; ventanas positivas 3/5
+  Monte Carlo: resultados guardados en la tabla consolidada; revisar percentiles y número de operaciones.
+
+2. gold_reports_comm_005
+------------------------------------------------------------------------
+Ruta: gold_reports_comm_005
+  Inicio: 2004-11-18
+  Fin: 2026-10-26
+  Velas: 5,518
+  Capital inicial: $10,000.00
+  Capital final: $14,970.95
+  Rentabilidad neta: 49.71%
+  Rentabilidad anualizada CAGR: 1.86%
+  Sharpe: 0.423
+  Drawdown máximo: -15.83%
+  Operaciones cerradas: 131
+  Tasa de acierto: 33.59%
+  Profit factor: 2.096
+  Racha máxima de pérdidas: 10
+  Máximo tiempo bajo máximo (sesiones): 2,125
+  Tiempo en mercado: 55.65%
+  Comisión por lado: 0.05%
+  Slippage normal por lado: 0.06%
+  Slippage alta volatilidad por lado: 0.15%
+  Posición abierta al final: 0.000
+  Operaciones con PnL legible: 131
+  PnL neto acumulado de operaciones cerradas: $4,970.95
+  Ganadoras / perdedoras: 44 / 87
+  Walk-forward OOS: 18 años; años positivos 10/18; retorno anual mediano 0.95%
+  Ventanas de crisis legibles: 5; ventanas positivas 3/5
+  Monte Carlo: resultados guardados en la tabla consolidada; revisar percentiles y número de operaciones.
+
+3. gold_reports_comm_010
+------------------------------------------------------------------------
+Ruta: gold_reports_comm_010
+  Inicio: 2004-11-18
+  Fin: 2026-10-26
+  Velas: 5,518
+  Capital inicial: $10,000.00
+  Capital final: $14,368.72
+  Rentabilidad neta: 43.69%
+  Rentabilidad anualizada CAGR: 1.67%
+  Sharpe: 0.384
+  Drawdown máximo: -16.20%
+  Operaciones cerradas: 131
+  Tasa de acierto: 32.06%
+  Profit factor: 1.924
+  Racha máxima de pérdidas: 10
+  Máximo tiempo bajo máximo (sesiones): 2,128
+  Tiempo en mercado: 55.65%
+  Comisión por lado: 0.10%
+  Slippage normal por lado: 0.06%
+  Slippage alta volatilidad por lado: 0.15%
+  Posición abierta al final: 0.000
+  Operaciones con PnL legible: 131
+  PnL neto acumulado de operaciones cerradas: $4,368.72
+  Ganadoras / perdedoras: 42 / 89
+  Walk-forward OOS: 18 años; años positivos 9/18; retorno anual mediano 0.76%
+  Ventanas de crisis legibles: 5; ventanas positivas 3/5
+  Monte Carlo: resultados guardados en la tabla consolidada; revisar percentiles y número de operaciones.
+
+RESUMEN COMPARATIVO
+========================================================================
+- gold_reports_comm_000: retorno 54.146%, CAGR 1.993%, Sharpe 0.455, drawdown -15.437%, operaciones 131
+- gold_reports_comm_005: retorno 49.709%, CAGR 1.857%, Sharpe 0.423, drawdown -15.834%, operaciones 131
+- gold_reports_comm_010: retorno 43.687%, CAGR 1.666%, Sharpe 0.384, drawdown -16.198%, operaciones 131
+
+LECTURA PRUDENTE
+========================================================================
+• No elijas solo por rentabilidad: contrasta drawdown, Sharpe, Profit Factor y robustez por años.
+• Comprueba que las cuatro variantes usan el mismo periodo, capital, comisiones y slippage antes de compararlas.
+• Un backtest con pocas operaciones o un único régimen de mercado puede ser poco representativo.
+• Si hay posición abierta al final, el resultado puede incluir valoración no realizada.
+• Los datos faltantes se muestran como N/D; no se han inventado ni rellenado.
+
+ARCHIVOS GENERADOS
+========================================================================
+Todos los resultados se guardaron en: C:\Users\HP\Downloads\Gold_Momentum_v1_3_Kit\resultado_maestro
